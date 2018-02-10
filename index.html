@@ -30,22 +30,23 @@
               </div>
               <div class="panel-body pb-calc-panel-body">
                 <input type="text" class="form-control" placeholder="2 + 2 = 4">
+                <input type="text" class="history" placeholder="History....">
 
                 <hr class="pb-calc-hr">
                 <div class="row">
                   <div class="col-md-12">
                     <div class="row" style="padding-bottom: 5px;">
                       <div class="col-xs-3 col-sm-3 col-md-3">
-                        <button class="btn pb-calc-btn operator"><span class="fa fa-percent"></span></button>
+                        <button class="btn pb-calc-btn operator disabled"><span class="fa fa-percent"></span></button>
                       </div>
                       <div class="col-xs-3 col-sm-3 col-md-3">
-                        <button class="btn pb-calc-btn operator"><span class="fa fa-check"></span></button>
+                        <button class="btn pb-calc-btn operator squareRoot"><span class="fa fa-check"></span></button>
                       </div>
                       <div class="col-xs-3 col-sm-3 col-md-3">
-                        <button class="btn pb-calc-btn operator"><span class="fa fa-superscript"></span></button>
+                        <button class="btn pb-calc-btn operator square"><span class="fa fa-superscript"></span></button>
                       </div>
                       <div class="col-xs-3 col-sm-3 col-md-3">
-                        <button class="btn pb-calc-btn operator"><span class="fa fa-arrows"></span></button>
+                        <button class="btn pb-calc-btn operator disabled"><span class="fa fa-arrows"></span></button>
                       </div>
                     </div>
                   </div>
@@ -110,13 +111,13 @@
                     </div>
                     <div class="row" style="padding-bottom: 5px;">
                       <div class="col-xs-3 col-sm-3 col-md-3">
-                        <button class="btn pb-calc-btn"><span class="fa fa-calculator"></span></button>
+                        <button class="btn pb-calc-btn disabled"><span class="fa fa-calculator"></span></button>
                       </div>
                       <div class="col-xs-3 col-sm-3 col-md-3">
-                        <button class="btn pb-calc-btn value">0</button>
+                        <button class="btn pb-calc-btn value" value="0">0</button>
                       </div>
                       <div class="col-xs-3 col-sm-3 col-md-3">
-                        <button class="btn pb-calc-btn value">.</button>
+                        <button class="btn pb-calc-btn value" value=".">.</button>
                       </div>
                       <div class="col-xs-3 col-sm-3 col-md-3">
                         <button class="btn pb-calc-btn equal"><strong>=</strong></button>
@@ -157,6 +158,16 @@
 
         .container {
           margin-top: 5% !important;
+        }
+
+        .history {
+          width: 100%;
+          border: none;
+          padding-left: 10px;
+          padding-top: 10px;
+          font-size: 15px;
+          margin: 0px;
+          font-weight: bold;
         }
 
         .pb-calc-container {
