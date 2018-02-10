@@ -5,7 +5,6 @@ var arr = [];
 var i = 0;
 function valuePressed() {
   // TO DO
-  console.log("Value Pressed");
   $(".form-control").focus();
   var btnVal = $(".form-control").val() + this.innerHTML;
   $(".form-control").val(btnVal);
@@ -24,7 +23,6 @@ function checkFirstVal() {
       exit();
     }
     var op = arr[i - 1];
-    // equalPressed();
     if(op == '+') {
       firstNum = firstNum + parseFloat($(".form-control").val());
       $(".form-control").val("");
@@ -38,16 +36,13 @@ function checkFirstVal() {
       firstNum = firstNum / parseFloat($(".form-control").val());
       $(".form-control").val("");
     }
-
   }
 }
 
 function operatorPressed() {
   // TO DO
-  console.log(arr);
   i += 1;
   arr[i] = this.value;
-  console.log("Operator Pressed");
   $(".form-control").focus();
 
   switch (this.value) {
@@ -67,17 +62,11 @@ function operatorPressed() {
       operator = '+';
       checkFirstVal();
       break;
-    default:
-
   }
-
-
 }
 
 function equalPressed() {
   // TO DO
-  console.log(arr);
-  console.log("Equal Pressed");
   $(".form-control").focus();
   secondNum = parseFloat($(".form-control").val());
   var result;
@@ -98,7 +87,6 @@ function equalPressed() {
       result = firstNum + secondNum;
       $(".form-control").val(result);
       break;
-    default:
   }
   $(".history").val(result);
   firstNum = null;
@@ -111,7 +99,6 @@ function equalPressed() {
 
 function delLastChar() {
   // TO DO
-  console.log("Delete Pressed");
   $(".form-control").focus();
   var value = $(".form-control").val();
   var value1 = $(".history").val();
@@ -161,5 +148,4 @@ $(document).ready(function() {
     $(".history").val("");
     $(".form-control").focus();
   });
-
 });
